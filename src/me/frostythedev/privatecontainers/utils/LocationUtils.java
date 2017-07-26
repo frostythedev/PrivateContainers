@@ -7,6 +7,8 @@ import org.bukkit.block.BlockFace;
 
 public class LocationUtils {
 
+    /*Useful tools that helped with my solutions*/
+
     public static String toString(Location location) {
         String world = location.getWorld().getName();
         double x = location.getX();

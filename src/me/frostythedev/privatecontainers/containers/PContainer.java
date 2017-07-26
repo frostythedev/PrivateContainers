@@ -5,6 +5,7 @@ import org.bukkit.Location;
 import java.util.UUID;
 
 public interface PContainer {
+    // Base class that all containers sohuld have, didn't have a use till dealing with double chests and doors
 
     UUID getRandomId();
     void setRandomId(UUID randomId);

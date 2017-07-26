@@ -117,6 +117,10 @@ public class SetupListener implements Listener {
                                         SpecialContainer newContainer = new SpecialContainer(uuid, true, ContainerType.DOUBLE_CHEST, null);
                                         newContainer.setRandomId(UUID.randomUUID());
 
+                                        /*I went ahead and used this method of locating the other halves of these
+                                        * special containers because it seemed like the most dependable solution I
+                                         * had compared to any of the others things that I tried.*/
+
                                         Location otherChest = LocationUtils.getRelativeOfSameTypeAround(block);
                                        if(otherChest != null){
                                            newContainer.setLocations(Lists.newArrayList(chest.getLocation(), otherChest));
@@ -149,6 +153,7 @@ public class SetupListener implements Listener {
                                     SpecialContainer newContainer = new SpecialContainer(uuid, true, ContainerType.ENTIRE_DOOR, null);
                                     newContainer.setRandomId(UUID.randomUUID());
 
+                                    /*Same as above.*/
                                     Location otherDoor = LocationUtils.getRelativeOfSameType(block, BlockFace.UP, BlockFace.DOWN);
                                     if(otherDoor != null){
                                         newContainer.setLocations(Lists.newArrayList(block.getLocation(), otherDoor));
