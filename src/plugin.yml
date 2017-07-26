@@ -1,0 +1,15 @@
+name: PrivateContainers
+main: me.frostythedev.privatecontainers.PCPlugin
+author: frostythedev
+version: 1.0.0
+description: Application Plugin for Locking/Unlocking Containers in Minecraft
+commands:
+  pcontainers:
+    description: Main command for PrivateContainers
+    aliases: [privatecontainers]
+  lock:
+    description: Command used to lock containers in PrivateContainers
+    aliases: [privatecontainerslock, pcontainerslock]
+  unlock:
+    description: Command used to unlock containers in PrivateContainers
+    aliases: [privatecontainersunlock, pcontainersunlock]

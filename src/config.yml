@@ -1,0 +1,22 @@
+# ~~~~~~~~~~~~~~~~~~~~~~~~~ #
+# SYNC SETTINGS
+# ~~~~~~~~~~~~~~~~~~~~~~~~~ #
+data:
+# Sync time is how often (in ticks the plugin will save container data to the preferred type
+# of storage default is set to 15 seconds.
+  sync-time: 300
+# This defines what type of data storage the plugin should depend on to offload data when saving
+# There are 2 types: YML (flatFile storage) & SQL (MySQL storage) each come with their own specified
+# details to be setup to work properly. By default if SQL settings are set and a connection cannot be made
+# data will be offloaded to flatfile.
+  type: YML
+  yml:
+# Specify the files you'd like the data to be held in no problems by default
+    file: 'containers.yml'
+    file-special: 'special-containers.yml'
+  mysql:
+    host: localhost
+    port: 3306
+    database: test_db
+    username: root
+    password: password
